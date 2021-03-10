@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<org.simple.clinic.home.overdue.OverdueScreen xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+
+  <org.simple.clinic.util.NestedScrollableHost
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/overdueRecyclerView"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:clipToPadding="false"
+      android:padding="@dimen/spacing_8"
+      android:visibility="gone" />
+
+  </org.simple.clinic.util.NestedScrollableHost>
+
+  <LinearLayout
+    android:id="@+id/viewForEmptyList"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:visibility="visible">
+
+    <ImageView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="@dimen/spacing_32"
+      android:adjustViewBounds="true"
+      android:contentDescription="@string/overdue_no_patients"
+      app:srcCompat="@drawable/illustration_overdue" />
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="@dimen/spacing_32"
+      android:layout_marginEnd="@dimen/spacing_32"
+      android:text="@string/overdue_no_patients"
+      android:textAppearance="?attr/textAppearanceHeadline6"
+      android:textColor="@color/color_on_surface_67"
+      tools:ignore="UnusedAttribute" />
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="@dimen/spacing_32"
+      android:layout_marginTop="@dimen/spacing_12"
+      android:layout_marginEnd="@dimen/spacing_32"
+      android:text="@string/overdue_empty_desc"
+      android:textAlignment="center"
+      android:textAppearance="?attr/textAppearanceSubtitle1"
+      android:textColor="@color/color_on_surface_67" />
+
+  </LinearLayout>
+
+</org.simple.clinic.home.overdue.OverdueScreen>
